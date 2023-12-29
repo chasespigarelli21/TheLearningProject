@@ -21,6 +21,22 @@ void ReturnAddress()
 }
 
 
+// Function: Take in an integer address and return the corresponding variable
+void ReturnVariable()
+{
+
+}
+
+
+// Create a car struct with different car parts as struct member variables
+
+
+
+
+
+// Create a class 
+
+
 int main()
 {
 
