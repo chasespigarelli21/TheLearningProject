@@ -95,10 +95,10 @@ int main()
 
 
 	// itterate thru the array
-	for (index = 1; index <= customLength; index++)
+	for (index = 0; index < customLength; index++)
 	{
 		// ask the user for the digits they would like to put into the array
-		printf("Please enter digit #");
+		printf("Please enter digit at index #");
 		printf("%d", index);
 		printf(": ");
 		scanf_s("%d", &customArray[ index ]);
@@ -109,17 +109,19 @@ int main()
 
 
 	// display array
-	for (index = 1; index <= customLength; index++)
+	for (index = 0; index < customLength; index++)
 	{
 		printf("Displaying Array");
 		printf("%c", NEW_LINE_CHAR);
 		printf("================");
 		printf("%c", NEW_LINE_CHAR);
 
-		printf("Digit #");
+		printf("Digit  at index #");
 		printf("%d", index);
 		printf(" with value: ");
 		printf("%d", customArray[index]);
+
+		printf("%c", NEW_LINE_CHAR);
 	}
 
 
