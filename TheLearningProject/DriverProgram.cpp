@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include <iostream>
+
 
 // Function: Take in an array of integers and sort them and return the sorted array
 void SortArray()
@@ -29,7 +31,19 @@ void ReturnVariable()
 
 
 // Create a car struct with different car parts as struct member variables
+struct car {
+	int engine;
+	int window;
+	int steeringWheel;
+	int seats;
+	int floormats;
+	int mirrors;
+	int year;
+	std::string model;
+	char model2[10];
+	std::string make;
 
+};
 
 
 
@@ -40,7 +54,7 @@ void ReturnVariable()
 int main()
 {
 
-
+	
 
 	printf("Program successfully terminated.\n");
 
