@@ -2,11 +2,43 @@
 
 #include <iostream>
 
+// Gloabl Variables
+
 const int STD_STR_LEN = 20;
 
 const int STD_ARRAY_LEN = 20;
 
 const char NEW_LINE_CHAR = '\n';
+
+
+// Create a car struct with different car parts as struct member variables
+struct car {
+	int engine;
+	int window;
+	int steeringWheel;
+	int seats;
+	int floorMats;
+	int mirrors;
+	int year;
+	char model[STD_STR_LEN];
+	char make[STD_STR_LEN];
+
+};
+
+
+
+
+// Create a class 
+
+
+
+
+
+
+
+
+
+
 
 // Function: Take in an array and its size and display the array
 void DisplayArray(int *someArray, int someLength)
@@ -47,6 +79,7 @@ int *SortArray( int someArray[], int length )
 		int temp;
 
 		// prompt
+		printf("%c", NEW_LINE_CHAR);
 		printf("Sorting Array...");
 		printf("%c", NEW_LINE_CHAR);
 		
@@ -71,6 +104,8 @@ int *SortArray( int someArray[], int length )
 				
 		}
 
+	printf("%c", NEW_LINE_CHAR);
+
 	// return the sorted array
 	return someArray;
 }
@@ -82,9 +117,34 @@ void SortLinkedList()
 
 }
 
-// Function: Take in an integer(variable) in and return the corresponding address
-void ReturnAddress()
+// Function: Take in an array and return the address
+void DisplayArrayAddress(int* someArray)
 {
+	printf("%c", NEW_LINE_CHAR);
+	printf("Displaying Array Address");
+	printf("%c", NEW_LINE_CHAR);
+	printf("%p", &someArray);
+	printf("%c", NEW_LINE_CHAR);
+}
+
+void DisplayArrayIntegerAddresses(int* someArray, int someSize)
+{
+
+	// initialize variables
+	int index;
+
+	printf("%c", NEW_LINE_CHAR);
+	
+
+	for (index = 0; index < someSize; index++)
+	{
+		printf("Displaying Array Address for Integer #");
+		printf("%d", index);
+		printf(": ");
+		printf("%p", &someArray[index]);
+		printf("%c", NEW_LINE_CHAR);
+
+	}
 
 }
 
@@ -96,24 +156,7 @@ void ReturnVariable()
 }
 
 
-// Create a car struct with different car parts as struct member variables
-struct car {
-	int engine;
-	int window;
-	int steeringWheel;
-	int seats;
-	int floormats;
-	int mirrors;
-	int year;
-	char model[STD_STR_LEN];
-	std::string make;
 
-};
-
-
-
-
-// Create a class 
 
 
 
@@ -139,12 +182,14 @@ int *GetDigitsForArray(int length, int *someArray)
 	for (index = 0; index < length; index++)
 	{
 		// prompt the user for digits
-		printf("Please enter #");
+		printf("Please enter digit #");
 		printf("%d", index + 1);
 		printf(": ");
 		scanf_s("%d", &someArray[index]);
 		
 	}
+
+	printf("%c", NEW_LINE_CHAR);
 
 	return someArray;
 
@@ -216,6 +261,16 @@ int main()
 		DisplayArray(array, arrayLength);
 
 
+	// Task 4: Display the array address
+
+		DisplayArrayAddress(array);
+
+
+    // Task 5: Display the address of each integer in the array
+
+		DisplayArrayIntegerAddresses(array, arrayLength);
+
+
 
 
 
@@ -233,6 +288,7 @@ int main()
 
 
 
+	printf("%c", NEW_LINE_CHAR);
 	printf("Program successfully terminated.\n");
 
 	// return program success
