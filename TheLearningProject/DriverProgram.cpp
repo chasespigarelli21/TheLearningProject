@@ -9,7 +9,7 @@ const int STD_ARRAY_LEN = 20;
 const char NEW_LINE_CHAR = '\n';
 
 // Function: Take in an array and its size and display the array
-void DisplayArray(int someArray[], int length)
+void DisplayArray(int *someArray, int someLength)
 {
 	// display the array
 
@@ -24,7 +24,7 @@ void DisplayArray(int someArray[], int length)
 
 
 		// iterate thru array
-		for (index = 0; index < length; index++)
+		for (index = 0; index < someLength; index++)
 		{
 
 			printf("%d", someArray[index]);
@@ -35,7 +35,7 @@ void DisplayArray(int someArray[], int length)
 
 
 // Function: Take in an array of integers and sort them and return the sorted array
-void SortArray( int someArray[], int length )
+int *SortArray( int someArray[], int length )
 {
 	// display the array
 		
@@ -47,12 +47,10 @@ void SortArray( int someArray[], int length )
 		int temp;
 
 		// prompt
-		printf("Displaying Sorted Array");
-		printf("%c", NEW_LINE_CHAR);
-		printf("================");
+		printf("Sorting Array...");
 		printf("%c", NEW_LINE_CHAR);
 		
-
+		
 		// loop through array
 		for (index = 0; index < length; index++)
 		{
@@ -72,6 +70,9 @@ void SortArray( int someArray[], int length )
 			
 				
 		}
+
+	// return the sorted array
+	return someArray;
 }
 
 
@@ -127,19 +128,21 @@ struct car {
 
 
 
-int* GetDigitsForArray(int length, int *someArray)
+int *GetDigitsForArray(int length, int *someArray)
 {
 
 	// initialize variables
 	int index;
 
-	// prompt the user for digits
-	printf("Please enter the digits you would like to enter into your array: ");
+
 
 	for (index = 0; index < length; index++)
 	{
+		// prompt the user for digits
+		printf("Please enter #");
+		printf("%d", index + 1);
+		printf(": ");
 		scanf_s("%d", &someArray[index]);
-
 		
 	}
 
@@ -149,7 +152,7 @@ int* GetDigitsForArray(int length, int *someArray)
 }
 
 
-int PromptArraySize()
+int PromptArrayLength()
 {
 
 	// initialize variables
@@ -174,30 +177,18 @@ int main()
 {
 	// initialize variables
 
-		// create an integer
-		int myInteger;
-
-		// create a string
-		char myString[STD_STR_LEN];
-
 		// create an pointer array
 		int *array;
 
 		// size of desired array
 		int arrayLength;
 
-		// index used in the for-loop
-		int index;
-
 		
+    // Task 1: Get array length
 
+		arrayLength = PromptArrayLength();
 
-
-    // Task 1: Get array size
-
-		arrayLength = PromptArraySize();
-
-		// Assign the array size to the array
+		// Assign the array length to the array
 		array = new int[arrayLength];
 		
 		
@@ -213,6 +204,15 @@ int main()
 	// Task 2: Display the array
 
 		// call function using an array and the array length to display the array
+		DisplayArray(array, arrayLength);
+
+
+	// Task 3: Sort the Array
+
+		// call function that takes in an array pointer and return the sorted array
+		array = SortArray(array, arrayLength);
+
+		// display the sorted array
 		DisplayArray(array, arrayLength);
 
 
