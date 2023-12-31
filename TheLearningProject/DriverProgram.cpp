@@ -11,34 +11,6 @@ const int STD_ARRAY_LEN = 20;
 const char NEW_LINE_CHAR = '\n';
 
 
-// Create a car struct with different car parts as struct member variables
-struct car {
-	int engine;
-	int window;
-	int steeringWheel;
-	int seats;
-	int floorMats;
-	int mirrors;
-	int year;
-	char model[STD_STR_LEN];
-	char make[STD_STR_LEN];
-
-};
-
-
-
-
-// Create a class 
-
-
-
-
-
-
-
-
-
-
 
 // Function: Take in an array and its size and display the array
 void DisplayArray(int *someArray, int someLength)
@@ -110,12 +82,6 @@ int *SortArray( int someArray[], int length )
 	return someArray;
 }
 
-
-// Function: Take in a linked list and return the sorted linked list 
-void SortLinkedList()
-{
-
-}
 
 // Function: Take in an array and return the address
 void DisplayArrayAddress(int* someArray)
