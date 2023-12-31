@@ -2,183 +2,16 @@
 
 #include <iostream>
 
-// Gloabl Variables
+#include "Array.h"
 
-const int STD_STR_LEN = 20;
+#include "LinkedList.h"
 
-const int STD_ARRAY_LEN = 20;
+#include "GlobalVariables.h"
 
-const char NEW_LINE_CHAR = '\n';
 
 
 
-// Function: Take in an array and its size and display the array
-void DisplayArray(int *someArray, int someLength)
-{
-	// display the array
 
-		// initialize variables
-		int index;
-
-		// prompt the title to the user
-		printf("Displaying Array");
-		printf("%c", NEW_LINE_CHAR);
-		printf("================");
-		printf("%c", NEW_LINE_CHAR);
-
-
-		// iterate thru array
-		for (index = 0; index < someLength; index++)
-		{
-
-			printf("%d", someArray[index]);
-			printf("%c", NEW_LINE_CHAR);
-
-		}
-}
-
-
-// Function: Take in an array of integers and sort them and return the sorted array
-int *SortArray( int someArray[], int length )
-{
-	// display the array
-		
-		// initialize variables
-		int index;
-
-		int innerIndex;
-
-		int temp;
-
-		// prompt
-		printf("%c", NEW_LINE_CHAR);
-		printf("Sorting Array...");
-		printf("%c", NEW_LINE_CHAR);
-		
-		
-		// loop through array
-		for (index = 0; index < length; index++)
-		{
-			for (innerIndex = 0; innerIndex < length - 1 - index; innerIndex++)
-			{
-				if (someArray[innerIndex] > someArray[innerIndex + 1])
-				{
-					// swap the integers
-					temp = someArray[innerIndex];
-					someArray[innerIndex] = someArray[innerIndex + 1];
-					someArray[innerIndex + 1] = temp;
-
-
-				}
-			}
-
-			
-				
-		}
-
-	printf("%c", NEW_LINE_CHAR);
-
-	// return the sorted array
-	return someArray;
-}
-
-
-// Function: Take in an array and return the address
-void DisplayArrayAddress(int* someArray)
-{
-	printf("%c", NEW_LINE_CHAR);
-	printf("Displaying Array Address");
-	printf("%c", NEW_LINE_CHAR);
-	printf("%p", &someArray);
-	printf("%c", NEW_LINE_CHAR);
-}
-
-void DisplayArrayIntegerAddresses(int* someArray, int someSize)
-{
-
-	// initialize variables
-	int index;
-
-	printf("%c", NEW_LINE_CHAR);
-	
-
-	for (index = 0; index < someSize; index++)
-	{
-		printf("Displaying Array Address for Integer #");
-		printf("%d", index);
-		printf(": ");
-		printf("%p", &someArray[index]);
-		printf("%c", NEW_LINE_CHAR);
-
-	}
-
-}
-
-
-// Function: Take in an integer address and return the corresponding variable
-void ReturnVariable()
-{
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int *GetDigitsForArray(int length, int *someArray)
-{
-
-	// initialize variables
-	int index;
-
-
-
-	for (index = 0; index < length; index++)
-	{
-		// prompt the user for digits
-		printf("Please enter digit #");
-		printf("%d", index + 1);
-		printf(": ");
-		scanf_s("%d", &someArray[index]);
-		
-	}
-
-	printf("%c", NEW_LINE_CHAR);
-
-	return someArray;
-
-
-}
-
-
-int PromptArrayLength()
-{
-
-	// initialize variables
-
-	// size of array variable
-	int size;
-
-	// prompt user for size
-	printf("Please enter the size of your array: ");
-	scanf_s("%d", &size);
-
-	return size;
-
-	
-}
 
 
 
@@ -194,64 +27,130 @@ int main()
 		// size of desired array
 		int arrayLength;
 
-		
-    // Task 1: Get array length
+		// node for linked list must be initialized otherwise you get an error
+		Node* node = nullptr;
 
-		arrayLength = PromptArrayLength();
+		// prompt for selecting which data structure to work with
+		int prompt;
 
-		// Assign the array length to the array
-		array = new int[arrayLength];
-		
-		
-
-
-	// Task 2: Get Digits
-
-		// Prompt user for digits in array
-		array = GetDigitsForArray(arrayLength, array);
+		// size of linked list
+		int linkedListSize;
 
 		
 
-	// Task 2: Display the array
-
-		// call function using an array and the array length to display the array
-		DisplayArray(array, arrayLength);
 
 
-	// Task 3: Sort the Array
+	// Task Prompt
 
-		// call function that takes in an array pointer and return the sorted array
-		array = SortArray(array, arrayLength);
+	printf("Welcome to the Learning Project.\n");
+	
 
-		// display the sorted array
-		DisplayArray(array, arrayLength);
-
-
-	// Task 4: Display the array address
-
-		DisplayArrayAddress(array);
-
-
-    // Task 5: Display the address of each integer in the array
-
-		DisplayArrayIntegerAddresses(array, arrayLength);
+	printf("Would you like to work with arrays(1) or linked lists(2)?\n");
+	scanf_s("%d", &prompt);
 
 
 
+	if (prompt == 1)
+	{
+
+		// Task #1 --> Array manipulation
+
+
+			// Task 1.1: Get array length from user
+
+			arrayLength = PromptArrayLength();
+
+			// Assign the array length to the array
+			array = new int[arrayLength];
 
 
 
 
+			// Task 1.2: Get digits from user
+
+				// Prompt user for digits in array
+			array = GetDigitsForArray(arrayLength, array);
+
+
+
+			// Task 1.3: Display the array
+
+				// call function using an array and the array length to display the array
+			DisplayArray(array, arrayLength);
+
+
+			// Task 1.4: Sort the Array
+
+				// call function that takes in an array pointer and return the sorted array
+			array = SortArray(array, arrayLength);
+
+			// display the sorted array
+			DisplayArray(array, arrayLength);
+
+
+			// Task 1.5: Display the array address
+
+				// call function to display the address of the array
+			DisplayArrayAddress(array);
+
+
+			// Task 1.6: Display the address of each integer in the array
+
+				// call function to display the address of each integer in the array
+			DisplayArrayIntegerAddresses(array, arrayLength);
+
+
+
+			// free array allocated memory
+			delete[] array;
 
 
 
 
-	// free any allocated memory
-	delete[] array;
+
+
+
+
+	}
+
+
+
+
 	
 
 
+	// Task 2 --> Linked List Manipulation
 
+	if (prompt == 2)
+	{
+
+
+
+		// prompt user for digits to place into linked list
+		node = AddNode(node);
+
+
+		// display the linked list
+		DisplayLinkedList(node);
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 	printf("%c", NEW_LINE_CHAR);

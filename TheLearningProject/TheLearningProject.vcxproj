@@ -129,6 +129,12 @@
   <ItemGroup>
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="Array.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="GlobalVariables.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
