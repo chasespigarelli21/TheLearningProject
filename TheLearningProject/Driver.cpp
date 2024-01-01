@@ -143,10 +143,28 @@ int main()
 
 			// Task 2.4: Sort the linked list
 
+				// call function to sort the linked list
+				node = SortLinkedList(node);
+
+				// display the sorted linked list
+				DisplayLinkedList(node);
+
 
 
 
 		}
+
+
+
+	// Task 3: Heap (Binary Search Tree)
+
+
+
+
+
+
+
+	// Task 4: Red Black Trees
 
 
 

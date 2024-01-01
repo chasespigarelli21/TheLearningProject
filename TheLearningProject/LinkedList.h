@@ -20,3 +20,7 @@ Node* AddNode(Node* head);
 
 // Function: Display a linked list
 void DisplayLinkedList(Node* head);
+
+
+// Function: Used to sort a linked list
+Node* SortLinkedList(Node* head);

@@ -8,7 +8,64 @@
 
 
 
+Node* SortLinkedList(Node* head)
+{
 
+	// initialize variables
+	bool swapped;
+	Node* temp;
+	Node* lastSorted = nullptr;
+
+	int tempData;
+
+
+
+	// prompt user
+	printf("%c", NEW_LINE_CHAR);
+	printf("Sorting Linked List...\n");
+
+
+
+	// if the linked list is empty or only has one element
+	if (!head || !head->next)
+	{
+		// return the linked list
+		return head;
+	}
+
+
+
+	do
+	{
+		swapped = false;
+		temp = head;
+
+		while (temp->next != lastSorted)
+		{
+			if (temp->data > temp->next->data)
+			{
+				// swap nodes
+				tempData = temp->data;
+				temp->data = temp->next->data;
+				temp->next->data = tempData;
+				swapped = true;
+			}
+
+			temp = temp->next;
+
+		}
+
+		lastSorted = temp;
+
+
+	} while (swapped);
+
+
+	return head;
+
+
+
+}
 
 
 // Function to add a node to the end of the linked list
