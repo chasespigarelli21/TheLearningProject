@@ -24,6 +24,9 @@
     <ClCompile Include="Array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Threads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="GlobalVariables.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

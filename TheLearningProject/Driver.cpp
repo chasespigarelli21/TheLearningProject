@@ -8,6 +8,8 @@
 
 #include "GlobalVariables.h"
 
+#include "Threads.h"
+
 
 
 
@@ -36,8 +38,17 @@ int main()
 		// integer for linked list prompt
 		const int linkedListSelection = 2;
 
+		// integer constant for threads prompt selection
+		const int threadsSelection = 3;
+
 		// used for a for-loop
 		int index;
+
+		// count used for how many threads the user wants
+		int threadCount;
+
+		// value used for incrementing and decrementing inside the threads
+		int threadValue = 0;
 
 		
 
@@ -48,7 +59,7 @@ int main()
 	printf("Welcome to the Learning Project.\n");
 	
 
-	printf("Would you like to work with arrays(1) or linked lists(2)? \n");
+	printf("Would you like to work with arrays(1), linked lists(2), or threads(3)? \n");
 	scanf_s("%d", &userSelection);
 
 	// Task #1 --> Array manipulation
@@ -156,7 +167,37 @@ int main()
 
 
 
-	// Task 3: Heap (Binary Search Tree)
+
+
+	
+
+	// Task 3: Threads
+	if (userSelection == threadsSelection)
+    {
+
+
+		printf("How many threads would you like: ");
+		scanf_s("%d", &threadCount);
+
+		for (index = 0; index < threadCount; index++)
+		{
+			// Task 3.1: Increment value in thread
+			threadValue = IncrementValueInThread(threadValue);
+			printf("Value after incrementing: ");
+			printf("%d", threadValue);
+			printf("%c", NEW_LINE_CHAR);
+
+
+			// Task 3.2: Decrememnt value in thread
+			threadValue = DecrementValueInThread(threadValue);
+			printf("Value after decrementing: ");
+			printf("%d", threadValue);
+			printf("%c", NEW_LINE_CHAR);
+		}
+
+
+	}
+	
 
 
 
@@ -164,7 +205,24 @@ int main()
 
 
 
-	// Task 4: Red Black Trees
+	// Task 4: Heap (Binary Search Tree)
+
+
+
+
+
+
+
+	// Task 5: Red Black Trees
+
+
+
+
+
+
+
+
+
 
 
 
