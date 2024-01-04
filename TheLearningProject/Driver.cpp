@@ -10,6 +10,10 @@
 
 #include "Threads.h"
 
+#include <thread>
+
+#include <mutex>
+
 
 
 
@@ -176,24 +180,52 @@ int main()
     {
 
 
-		printf("How many threads would you like: ");
-		scanf_s("%d", &threadCount);
+		int sharedValue = 0;
 
-		for (index = 0; index < threadCount; index++)
+		/*
+			printf("Enter number of threads: ");
+			scanf_s("%d", &threadCount);
+		*/
+
+
+		// Creating thread for incrementing the value
+		std::thread incrementThread([&sharedValue]()
 		{
-			// Task 3.1: Increment value in thread
-			threadValue = IncrementValueInThread(threadValue);
-			printf("Value after incrementing: ");
-			printf("%d", threadValue);
-			printf("%c", NEW_LINE_CHAR);
+
+			int index;
+
+			// increment the thread five times
+			for (index = 0; index < 5; index++) 
+			{
+
+				sharedValue = IncrementValueInThread(sharedValue);
+				
+			}
+
+		});
+
+		// Creating thread for decrementing the thread
+		std::thread decrementThread([&sharedValue]()
+		{
+			int index;
+			
+			// decrement the thread five times
+			for (index = 0; index < 5; index++) 
+			{
+
+				sharedValue = DecrementValueInThread(sharedValue);
+				
+			}
+
+		});
 
 
-			// Task 3.2: Decrememnt value in thread
-			threadValue = DecrementValueInThread(threadValue);
-			printf("Value after decrementing: ");
-			printf("%d", threadValue);
-			printf("%c", NEW_LINE_CHAR);
-		}
+
+
+	    // join threads to wait for them to finish
+		incrementThread.join();
+		decrementThread.join();
+
 
 
 	}

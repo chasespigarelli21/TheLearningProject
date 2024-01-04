@@ -2,20 +2,35 @@
 #include <thread>
 #include <mutex>
 
-// function that increments a count when executing
-// uses mutex lock
-// returns the value
-int IncrementValueInThread(int& value, std::mutex& mtx)
+#include "GlobalVariables.h"
+
+
+
+std::mutex mutex;
+
+
+
+// Function: Increments a given value inside a thread
+int IncrementValueInThread(int value)
 {
-    std::lock_guard<std::mutex> lock(mtx);
+    // lock the mutex to ensure exculsive access
+    std::lock_guard<std::mutex> lock(mutex);
     value++;
+    printf("Value after incrementing: ");
+    printf("%d", value);
+    printf("%c", NEW_LINE_CHAR);
     return value;
 }
 
-int DecrementValueInThread(int& value, std::mutex& mtx)
+// Function: Decrements a given value inside a thread
+int DecrementValueInThread(int value)
 {
-    std::lock_guard<std::mutex> lock(mtx);
+    // lock the mutex to ensure exclusive access
+    std::lock_guard<std::mutex> lock(mutex);
     value--;
+    printf("Value after decrementing: ");
+    printf("%d", value);
+    printf("%c", NEW_LINE_CHAR);
     return value;
 }
 
