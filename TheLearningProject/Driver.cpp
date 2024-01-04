@@ -177,58 +177,16 @@ int main()
 
 	// Task 3: Threads
 	if (userSelection == threadsSelection)
-    {
+	{
+		// Create two threads, each associated with a different function
+		std::thread worker1(IncrementValueInThread);
+		std::thread worker2(DecrementValueInThread);
 
-
-		int sharedValue = 0;
-
-		/*
-			printf("Enter number of threads: ");
-			scanf_s("%d", &threadCount);
-		*/
-
-
-		// Creating thread for incrementing the value
-		std::thread incrementThread([&sharedValue]()
-		{
-
-			int index;
-
-			// increment the thread five times
-			for (index = 0; index < 5; index++) 
-			{
-
-				sharedValue = IncrementValueInThread(sharedValue);
-				
-			}
-
-		});
-
-		// Creating thread for decrementing the thread
-		std::thread decrementThread([&sharedValue]()
-		{
-			int index;
-			
-			// decrement the thread five times
-			for (index = 0; index < 5; index++) 
-			{
-
-				sharedValue = DecrementValueInThread(sharedValue);
-				
-			}
-
-		});
-
-
-
-
-	    // join threads to wait for them to finish
-		incrementThread.join();
-		decrementThread.join();
-
-
-
+		// Wait for the threads to finish their execution before proceeding
+		worker1.join(); // This function call blocks the main thread until worker1 completes
+		worker2.join(); // This function call blocks the main thread until worker2 completes
 	}
+
 	
 
 

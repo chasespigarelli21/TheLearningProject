@@ -1,7 +1,7 @@
 
 
 
-int IncrementValueInThread(int value);
+void IncrementValueInThread();
 
 
 
@@ -10,4 +10,4 @@ int IncrementValueInThread(int value);
 
 
 
-int DecrementValueInThread(int value);
+void DecrementValueInThread();
