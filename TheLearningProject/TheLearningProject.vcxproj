@@ -127,16 +127,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoublePointer.cpp" />
     <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="Heap.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Array.cpp" />
+    <ClCompile Include="NineQueensProblem.cpp" />
+    <ClCompile Include="RaceConditions.cpp" />
+    <ClCompile Include="RedBlackTrees.cpp" />
+    <ClCompile Include="Semaphore.cpp" />
+    <ClCompile Include="StringArray.cpp" />
     <ClCompile Include="Threads.cpp" />
     <ClCompile Include="Vectors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="DoublePointer.h" />
     <ClInclude Include="GlobalVariables.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="NineQueensProblem.h" />
+    <ClInclude Include="RaceConditions.h" />
+    <ClInclude Include="RedBlackTrees.h" />
+    <ClInclude Include="Semaphore.h" />
+    <ClInclude Include="StringArray.h" />
     <ClInclude Include="Threads.h" />
     <ClInclude Include="Vectors.h" />
   </ItemGroup>

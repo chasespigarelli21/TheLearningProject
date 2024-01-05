@@ -30,6 +30,27 @@
     <ClCompile Include="Vectors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StringArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Semaphore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoublePointer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RaceConditions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackTrees.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NineQueensProblem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
@@ -45,6 +66,27 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Vectors.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringArray.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Semaphore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublePointer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RaceConditions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTrees.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NineQueensProblem.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

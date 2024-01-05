@@ -117,7 +117,7 @@ int* GetDigitsForArray(int length, int* someArray)
 	int index;
 
 
-
+	// loop
 	for (index = 0; index < length; index++)
 	{
 		// prompt the user for digits
@@ -130,6 +130,7 @@ int* GetDigitsForArray(int length, int* someArray)
 
 	printf("%c", NEW_LINE_CHAR);
 
+	// return the someArray pointer
 	return someArray;
 
 

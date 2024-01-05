@@ -1,5 +1,5 @@
 
-
+// pre-processor directives
 #include <iostream>
 
 #include <vector>
@@ -7,7 +7,16 @@
 #include "GlobalVariables.h"
 
 
-// Function Used to get a vector from the user
+// Function: Welcome user to the vectors page
+void WelcomeToVectors()
+{
+	// display welcome message to the user
+	printf("Welcome to vectors");
+	printf("%c", NEW_LINE_CHAR);
+}
+
+
+// Function: Used to get a vector from the user
 void getVector(std::vector<int>& vec)
 {
 	// initialize variables

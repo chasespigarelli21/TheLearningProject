@@ -13,3 +13,8 @@ void displayVector(const std::vector<int>& vec);
 
 // Function Used to get a vector from the user
 void getVector(std::vector<int>& vec);
+
+
+
+// Function: Welcome user to the vectors page
+void WelcomeToVectors();

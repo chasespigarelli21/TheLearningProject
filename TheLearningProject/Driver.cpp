@@ -16,6 +16,22 @@
 
 #include "Vectors.h"
 
+#include "DoublePointer.h"
+
+#include "RaceConditions.h"
+
+#include "Semaphore.h"
+
+#include "StringArray.h"
+
+#include "Heap.h"
+
+#include "RedBlackTrees.h"
+
+#include "NineQueensProblem.h"
+
+
+
 
 
 
@@ -53,6 +69,27 @@ int main()
 		// integer constant for vectors prompt selection
 		const int vectorSelection = 4;
 
+		// integer constant for double pointers prompt selection
+		const int doublePointerSelection = 5;
+
+		// integer constant for race conditions selection
+		const int raceConditionsSelection = 6;
+
+		// integer constant for semaphore selection
+		const int semaphoreSelection = 7;
+
+		// integer constant for string array selection
+		const int stringArraySelection = 8;
+
+		// integer constant for a heap
+		const int heapSelection = 9;
+
+		// integer constant for red-black trees
+		const int redBlackTreesSelection = 10;
+
+		// integer constant for nine-queen problem
+		const int nineQueensProblemSelection = 11;
+
 		// used for a for-loop
 		int index;
 
@@ -71,7 +108,7 @@ int main()
 	printf("Welcome to the Learning Project.\n");
 	
 
-	printf("Would you like to work with arrays(1), linked lists(2), threads(3), or vectors(4)? \n");
+	printf("Would you like to work with arrays(1), linked lists(2), threads(3), vectors(4), double pointers(5), race conditions(6), semaphores(7), or string arrays(8)? \n");
 	scanf_s("%d", &userSelection);
 
 	// Task #1 --> Array manipulation
@@ -186,6 +223,10 @@ int main()
 	// Task 3: Threads
 	if (userSelection == threadsSelection)
 	{
+
+		WelcomeToThreads();
+
+
 		printf("Please enter the number of threads: ");
 		scanf_s("%d", &threadCount);
 
@@ -211,11 +252,100 @@ int main()
 		// initialize variables
 		std::vector<int> myVector;
 
+		// welcome user to the vectors section
+		WelcomeToVectors();
+
 		// Get vector from the user
 		getVector(myVector);
 
 		// Display the vector
 		displayVector(myVector);
+	}
+
+
+
+	// Task 5: Double Pointers
+	if (userSelection == doublePointerSelection)
+	{
+
+		// initialize variables
+
+
+		WelcomeToDoublePointers();
+	}
+
+
+
+
+
+	// Task 6: Race Conditions
+	if (userSelection == raceConditionsSelection)
+	{
+		// initialize variables
+
+		WelcomeToRaceConditions();
+	}
+
+
+
+	// Task 7: Semaphores
+	if (userSelection == semaphoreSelection)
+	{
+		// initialize variables
+
+		WelcomeToSemaphores();
+	}
+
+
+
+
+	// Task 8: String Arrays
+	if (userSelection == stringArraySelection)
+	{
+		// initialize variables
+
+		WelcomeToStringArray();
+	}
+
+
+
+
+	// Task 9: Heap (Binary Search Tree)
+	if (userSelection == heapSelection)
+	{
+		// initialize variables
+
+
+		// welcome user to the heaps section
+		WelcomeToHeaps();
+	}
+
+
+
+
+	// Task 10 Red Black Trees
+	if (userSelection == redBlackTreesSelection)
+	{
+		// initialize variables
+
+
+		// welcome user to the red black trees section
+		WelcomeToRedBlackTrees();
+	}
+
+
+
+
+
+
+	// Task 11: Nine Queens Problem
+	if (userSelection == nineQueensProblemSelection)
+	{
+		// initialize variables
+
+
+		// welcome user to the nine queens problem section
+		WelcomeToNineQueensProblem();
 	}
 
 	
@@ -226,46 +356,18 @@ int main()
 
 
 
-	// Task 5: Heap (Binary Search Tree)
-
-
-
-
-
-
-
-	// Task 6: Red Black Trees
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
 	printf("%c", NEW_LINE_CHAR);
 	printf("Program successfully terminated.\n");
 
 	// Print the value of __cplusplus
 	std::cout << "C++ version: " << __cplusplus << std::endl;
+
+	// test
+	int testNum = 5;
+	printf("%c", NEW_LINE_CHAR);
+	printf("Test: ");
+	printf("%d", ++testNum);
+	
 
 	printf("%c", NEW_LINE_CHAR);
 
