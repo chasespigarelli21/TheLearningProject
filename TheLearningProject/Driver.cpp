@@ -14,6 +14,8 @@
 
 #include <mutex>
 
+#include "Vectors.h"
+
 
 
 
@@ -48,6 +50,9 @@ int main()
 		// integer constant for threads prompt selection
 		const int threadsSelection = 3;
 
+		// integer constant for vectors prompt selection
+		const int vectorSelection = 4;
+
 		// used for a for-loop
 		int index;
 
@@ -66,7 +71,7 @@ int main()
 	printf("Welcome to the Learning Project.\n");
 	
 
-	printf("Would you like to work with arrays(1), linked lists(2), or threads(3)? \n");
+	printf("Would you like to work with arrays(1), linked lists(2), threads(3), or vectors(4)? \n");
 	scanf_s("%d", &userSelection);
 
 	// Task #1 --> Array manipulation
@@ -197,6 +202,22 @@ int main()
 
 	}
 
+
+
+
+	// Task 4: Vectors
+	if (userSelection == vectorSelection)
+	{
+		// initialize variables
+		std::vector<int> myVector;
+
+		// Get vector from the user
+		getVector(myVector);
+
+		// Display the vector
+		displayVector(myVector);
+	}
+
 	
 
 
@@ -205,7 +226,7 @@ int main()
 
 
 
-	// Task 4: Heap (Binary Search Tree)
+	// Task 5: Heap (Binary Search Tree)
 
 
 
@@ -213,7 +234,7 @@ int main()
 
 
 
-	// Task 5: Red Black Trees
+	// Task 6: Red Black Trees
 
 
 
@@ -242,6 +263,11 @@ int main()
 
 	printf("%c", NEW_LINE_CHAR);
 	printf("Program successfully terminated.\n");
+
+	// Print the value of __cplusplus
+	std::cout << "C++ version: " << __cplusplus << std::endl;
+
+	printf("%c", NEW_LINE_CHAR);
 
 	// return program success
 	return 0;

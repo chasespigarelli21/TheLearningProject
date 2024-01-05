@@ -131,12 +131,14 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="Threads.cpp" />
+    <ClCompile Include="Vectors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="GlobalVariables.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Threads.h" />
+    <ClInclude Include="Vectors.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

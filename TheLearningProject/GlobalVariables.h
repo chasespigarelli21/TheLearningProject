@@ -1,4 +1,4 @@
-// Gloabl Variables
+// Global Variables
 
 const int STD_STR_LEN = 20;
 
