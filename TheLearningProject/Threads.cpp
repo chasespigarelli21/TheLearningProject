@@ -16,7 +16,7 @@ void IncrementValueInThread()
 {
     
     
-    for (int index = 0; index < 200; index++)
+    for (int index = 0; index < 100; index++)
     {
 
         // Lock the mutex to protect sharedValue
@@ -45,7 +45,7 @@ void DecrementValueInThread()
 {
     
 
-    for (int index = 0; index < 200; index++)
+    for (int index = 0; index < 100; index++)
     {
         // Lock the mutex to protect sharedValue
         std::lock_guard<std::mutex> lock(valueMutex);
@@ -59,7 +59,7 @@ void DecrementValueInThread()
 
 
         // Introduce a delay to make the loop iterations slower
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
         
 
         
