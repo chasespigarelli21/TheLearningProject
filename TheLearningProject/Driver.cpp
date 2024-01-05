@@ -178,6 +178,7 @@ int main()
 	// Task 3: Threads
 	if (userSelection == threadsSelection)
 	{
+
 		// Create two threads, each associated with a different function
 		std::thread worker1(IncrementValueInThread);
 		std::thread worker2(DecrementValueInThread);
@@ -185,6 +186,9 @@ int main()
 		// Wait for the threads to finish their execution before proceeding
 		worker1.join(); // This function call blocks the main thread until worker1 completes
 		worker2.join(); // This function call blocks the main thread until worker2 completes
+
+		
+
 	}
 
 	
