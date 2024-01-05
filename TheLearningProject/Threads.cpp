@@ -1,12 +1,17 @@
 #include <iostream>
 #include <thread>
+#include <semaphore>
 
 
 #include "GlobalVariables.h"
 
 #include <mutex>
 
+// value used to increment and decrement inside the threads
 int theVal;
+
+
+
 
 // Mutex to protect the shared variable
 std::mutex valueMutex;
@@ -68,5 +73,10 @@ void DecrementValueInThread(int count)
 
 
 
+
+void TheSemaphoreFunc()
+{
+
+}
 
 
