@@ -12,11 +12,11 @@ int theVal;
 std::mutex valueMutex;
 
 // Function: Increments a given value inside a thread
-void IncrementValueInThread()
+void IncrementValueInThread(int count)
 {
     
     
-    for (int index = 0; index < 100; index++)
+    for (int index = 0; index < count; index++)
     {
 
         // Lock the mutex to protect sharedValue
@@ -41,11 +41,11 @@ void IncrementValueInThread()
 }
 
 // Function: Decrements a given value inside a thread
-void DecrementValueInThread()
+void DecrementValueInThread(int count)
 {
     
 
-    for (int index = 0; index < 100; index++)
+    for (int index = 0; index < count; index++)
     {
         // Lock the mutex to protect sharedValue
         std::lock_guard<std::mutex> lock(valueMutex);
