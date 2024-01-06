@@ -18,3 +18,8 @@ void getVector(std::vector<int>& vec);
 
 // Function: Welcome user to the vectors page
 void WelcomeToVectors();
+
+
+
+
+// Function: Sort the vector
