@@ -269,9 +269,29 @@ int main()
 	{
 
 		// initialize variables
+		int myValForPointerSection;
+
+		int** myDoublePointer;
+
+
 
 
 		WelcomeToDoublePointers();
+
+
+		printf("Please enter a value: ");
+		scanf_s("%d", &myValForPointerSection);
+		printf("%c", NEW_LINE_CHAR);
+
+
+
+
+
+		myDoublePointer = ReturnDoublePointer(myValForPointerSection);
+
+		printf("%p", myDoublePointer);
+
+
 	}
 
 
@@ -303,13 +323,18 @@ int main()
 	if (userSelection == stringArraySelection)
 	{
 		// initialize variables
-		char theString[] = "fsdfsaf";
+		char theString[STD_STR_LEN];
+
+		WelcomeToStringArray();
+
+		printf("Please enter a string: ");
+		scanf_s("%s", &theString, STD_STR_LEN);
 
 		printf("The string before sorting: ");
 		printf("%s", theString);
 		printf("%c", NEW_LINE_CHAR);
 
-		WelcomeToStringArray();
+		
 
 		SortStringArray(theString);
 

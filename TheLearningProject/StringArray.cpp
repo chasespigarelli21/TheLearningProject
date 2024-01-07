@@ -12,6 +12,7 @@ void WelcomeToStringArray()
 {
 	// welcome the user
 	printf("Welcome to string arrays");
+	printf("%c", NEW_LINE_CHAR);
 }
 
 

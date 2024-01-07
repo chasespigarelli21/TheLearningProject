@@ -14,13 +14,15 @@ void WelcomeToDoublePointers()
 
 
 // reuturn a double pointer
-void** ReturnDoublePointer(void** someDoublePointer)
+int** ReturnDoublePointer(int someVar)
 {
 
-	void* someVar;
 
-	void** someVarPointer = &someVar;
 
-	return someDoublePointer;
+	int* someVarPointer = &someVar;
+
+	int** someVarDoublePointer = &someVarPointer;
+
+	return someVarDoublePointer;
 
 }
