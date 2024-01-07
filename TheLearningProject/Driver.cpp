@@ -303,8 +303,28 @@ int main()
 	if (userSelection == stringArraySelection)
 	{
 		// initialize variables
+		char theString[] = "fsdfsaf";
+
+		printf("The string before sorting: ");
+		printf("%s", theString);
+		printf("%c", NEW_LINE_CHAR);
 
 		WelcomeToStringArray();
+
+		SortStringArray(theString);
+
+		printf("The string after sorting: ");
+		printf("%s", theString);
+		printf("%c", NEW_LINE_CHAR);
+
+
+
+
+		
+
+
+
+
 	}
 
 

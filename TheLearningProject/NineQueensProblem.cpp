@@ -14,3 +14,10 @@ void WelcomeToNineQueensProblem()
 	printf("%c", NEW_LINE_CHAR);
 
 }
+
+
+// Function: Used to solve the nine queens problem
+void SolveNineQueensProblem()
+{
+
+}

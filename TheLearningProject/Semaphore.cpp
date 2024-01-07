@@ -13,3 +13,18 @@ void WelcomeToSemaphores()
 	printf("%c", NEW_LINE_CHAR);
 
 }
+
+
+
+// first semaphore
+void SemaphoreOne()
+{
+
+}
+
+
+// second semaphore
+void SemaphoreTwo()
+{
+
+}
