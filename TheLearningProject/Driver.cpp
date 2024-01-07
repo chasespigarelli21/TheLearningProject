@@ -277,6 +277,7 @@ int main()
 
 
 		WelcomeToDoublePointers();
+		printf("%c", NEW_LINE_CHAR);
 
 
 		printf("Please enter a value: ");
@@ -289,7 +290,6 @@ int main()
 
 		myDoublePointer = ReturnDoublePointer(myValForPointerSection);
 
-		printf("%p", myDoublePointer);
 
 
 	}
