@@ -30,9 +30,37 @@
 
 #include "NineQueensProblem.h"
 
+#include <string>
 
 
 
+
+
+
+class Person
+{
+	public:
+		int age;
+		char name[STD_STR_LEN];
+
+
+		void SetNameToChase()
+		{
+			strcpy_s(name, "Chase");
+		}
+
+
+};
+
+
+
+
+struct Car
+{
+	int year;
+	char make[STD_STR_LEN];
+	char model[STD_STR_LEN];
+};
 
 
 
@@ -98,6 +126,39 @@ int main()
 
 		// value used for incrementing and decrementing inside the threads
 		int threadValue = 0;
+
+		
+
+	// Task 0: Classes and Structs Manipulation
+
+		// Task 0.1: Class Manipulation
+		Person Chase;
+
+		strcpy_s(Chase.name, "NPC");
+
+		printf("Name before calling set name function: ");
+		printf("%s", Chase.name);
+		printf("%c", NEW_LINE_CHAR);
+
+		Chase.SetNameToChase();
+
+		printf("Name after calling set name function: ");
+		printf("%s", Chase.name);
+		printf("%c", NEW_LINE_CHAR);
+
+
+		// Task 0.2: Struct Manipulation
+
+		Car truck;
+
+		truck.year = 2012;
+
+		strcpy(truck.make, "Dodge");
+		strcpy(truck.model, "Ram");
+
+		
+
+
 
 		
 
