@@ -32,6 +32,8 @@
 
 #include <string>
 
+#include "Polymorphism.h"
+
 
 
 
@@ -85,6 +87,9 @@ int main()
 		// size of linked list
 		int linkedListSize;
 
+		// integer constant for working with classes and structs
+		const int classAndStructSelection = 0;
+
 		// integer for array prompt
 		const int arraySelection = 1;
 
@@ -118,6 +123,9 @@ int main()
 		// integer constant for nine-queen problem
 		const int nineQueensProblemSelection = 11;
 
+		// integer constant to go to the polymorphism section
+		const int polymorphismSelection = 12;
+
 		// used for a for-loop
 		int index;
 
@@ -128,33 +136,6 @@ int main()
 		int threadValue = 0;
 
 		
-
-	// Task 0: Classes and Structs Manipulation
-
-		// Task 0.1: Class Manipulation
-		Person Chase;
-
-		strcpy_s(Chase.name, "NPC");
-
-		printf("Name before calling set name function: ");
-		printf("%s", Chase.name);
-		printf("%c", NEW_LINE_CHAR);
-
-		Chase.SetNameToChase();
-
-		printf("Name after calling set name function: ");
-		printf("%s", Chase.name);
-		printf("%c", NEW_LINE_CHAR);
-
-
-		// Task 0.2: Struct Manipulation
-
-		Car truck;
-
-		truck.year = 2012;
-
-		strcpy(truck.make, "Dodge");
-		strcpy(truck.model, "Ram");
 
 		
 
@@ -169,8 +150,47 @@ int main()
 	printf("Welcome to the Learning Project.\n");
 	
 
-	printf("Would you like to work with arrays(1), linked lists(2), threads(3), vectors(4), double pointers(5), race conditions(6), semaphores(7), or string arrays(8)? \n");
+	printf("Would you like to work with arrays(1), linked lists(2), threads(3), vectors(4), double pointers(5), race conditions(6), semaphores(7), string arrays(8), hepas(9), red black trees(10), nine queens problem(11), polymorphism(12), encapsulation(13)? \n");
 	scanf_s("%d", &userSelection);
+
+
+
+	if (userSelection == classAndStructSelection)
+	{
+		// Task 0: Classes and Structs Manipulation
+
+			// Task 0.1: Class Manipulation
+				Person Chase;
+
+				strcpy_s(Chase.name, "NPC");
+
+				printf("Name before calling set name function: ");
+				printf("%s", Chase.name);
+				printf("%c", NEW_LINE_CHAR);
+
+				Chase.SetNameToChase();
+
+				printf("Name after calling set name function: ");
+				printf("%s", Chase.name);
+				printf("%c", NEW_LINE_CHAR);
+
+
+				// Task 0.2: Struct Manipulation
+
+				Car truck;
+
+				truck.year = 2012;
+
+				strcpy_s(truck.make, "Dodge");
+				strcpy_s(truck.model, "Ram");
+	}
+
+
+
+
+
+
+
 
 	// Task #1 --> Array manipulation
 
@@ -454,6 +474,27 @@ int main()
 		WelcomeToNineQueensProblem();
 	}
 
+
+
+
+	// Task 12: Polymorphism
+	if (userSelection == polymorphismSelection)
+	{
+
+
+		Shape* shape;
+
+		// Using runtime polymorphism
+		shape = new Circle();
+		shape->Draw();
+
+		shape = new Square();
+		shape->Draw();
+
+		delete shape;
+
+
+	}
 	
 
 
